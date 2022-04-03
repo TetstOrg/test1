@@ -1,0 +1,8 @@
+on:
+  workflow_dispatch: 
+jobs:
+  checkout_first_pro:
+    runs-on: self-hosted
+    steps:
+    - name: Checkout first project
+      run: sleep 200
