@@ -1,3 +1,4 @@
+name: First job
 on:
   workflow_dispatch: 
 jobs:
