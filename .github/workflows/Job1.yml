@@ -13,7 +13,7 @@ jobs:
         run: |
           echo "Build Project 1"
           sleep 10
-      - uses: convictional/trigger-workflow-and-wait@v1.3.0
+      - uses: convictional/trigger-workflow-and-wait@master
         with:
           owner: TetstOrg
           repo:  test2
