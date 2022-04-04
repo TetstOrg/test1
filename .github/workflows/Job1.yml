@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: Project 1
-    runs-on: atc-enterprise
+    runs-on: self-hosted
     steps:
       - name: Build Project 1
         run: |
