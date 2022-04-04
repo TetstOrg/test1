@@ -19,4 +19,4 @@ jobs:
           github_user: TetstOrg
           workflow_file_name: deploy.yml
       - name: Post action
-        run: sleep 10
+        run: sleep 10 && exit
