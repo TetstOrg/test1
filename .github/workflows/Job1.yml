@@ -13,11 +13,12 @@ jobs:
         run: |
           echo "Build Project 1"
           sleep 10
-      - uses: convictional/trigger-workflow-and-wait@master
+      - uses: convictional/trigger-workflow-and-wait@v1.6.0
         with:
           owner: TetstOrg
           repo:  test2
           github_token: ${{ secrets.G_ACCESS_TOKEN }}         # ask about token!
+          github_user: TetstOrg
           workflow_file_name: deploy.yml
       - name: Post action
         run: sleep 10
