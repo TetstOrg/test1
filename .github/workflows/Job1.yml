@@ -1,9 +1,23 @@
-name: First job
+name: Deploy
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
+#  push:
+#    branches:
+#      - master
 jobs:
-  checkout_first_pro:
-    runs-on: self-hosted
+  build:
+    name: Project 1
+    runs-on: atc-enterprise
     steps:
-    - name: Checkout first project
-      run: sleep 200
+      - name: Build Project 1
+        run: |
+          echo "Build Project 1"
+          sleep 10s
+      - uses: convictional/trigger-workflow-and-wait@v1.3.0
+        with:
+          owner: ATC-GitHub
+          repo:  devportal-test
+          github_token: ${{ secrets.G_ACCESS_TOKEN }}         # ask about token!
+          workflow_file_name: deploy.yml
+      - name: Post action
+        run: sleep 10s
