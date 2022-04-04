@@ -18,5 +18,3 @@ jobs:
           github_token: ${{ secrets.G_ACCESS_TOKEN }}         # ask about token!
           github_user: TetstOrg
           workflow_file_name: deploy.yml
-      - name: Post action
-        run: sleep 10 && exit
