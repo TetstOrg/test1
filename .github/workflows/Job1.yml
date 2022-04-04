@@ -15,8 +15,8 @@ jobs:
           sleep 10s
       - uses: convictional/trigger-workflow-and-wait@v1.3.0
         with:
-          owner: ATC-GitHub
-          repo:  devportal-test
+          owner: TetstOrg
+          repo:  test2
           github_token: ${{ secrets.G_ACCESS_TOKEN }}         # ask about token!
           workflow_file_name: deploy.yml
       - name: Post action
